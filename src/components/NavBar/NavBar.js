@@ -33,14 +33,10 @@ const NavBar = () => {
                   fontWeight: "bold",
                   color: "black"
                 }}>Doctors</NavLink>
-                <NavLink to="/services" className="f-13" style={{color:"black"}}   activeStyle={{
+                {/* <NavLink to="/about" className="f-13" style={{color:"black"}}   activeStyle={{
                   fontWeight: "bold",
                   color: "black"
-                }}>Services</NavLink>
-                <NavLink to="/about" className="f-13" style={{color:"black"}}   activeStyle={{
-                  fontWeight: "bold",
-                  color: "black"
-                }}>About Us</NavLink>
+                }}>About</NavLink> */}
                 <NavLink to="/blogs" className="f-13" style={{color:"black"}}   activeStyle={{
                   fontWeight: "bold",
                   color: "black"

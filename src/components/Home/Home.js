@@ -74,13 +74,13 @@ const Home = () => {
                                     <span>Expert Doctors</span>
                                 </div>
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-md-6 mb-4">
                                 <div className="Homeblack">
                                     <h3>315+</h3>
                                     <span>Expert Doctors</span>
                                 </div>
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-md-6 mb-4">
                                 <div className="Homered">
                                     <h3>105+</h3>
                                     <span>Expert Doctors</span>
