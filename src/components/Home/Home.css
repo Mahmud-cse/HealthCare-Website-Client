@@ -1,0 +1,15 @@
+.customHome {
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    height: 600px;
+}
+
+.customHome2 {
+    padding-left: 120px;
+    padding-top: 200px;
+}
+
+.service-thumbnail_text {
+    text-align: left;
+    margin: 10px 0 0 14px;
+}
