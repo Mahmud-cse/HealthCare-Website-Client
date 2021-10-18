@@ -5,6 +5,7 @@ import img from '../img/service-thumbnail01.png';
 import img2 from '../img/service-thumbnail02.png';
 import img3 from '../img/service-thumbnail03.png';
 import img4 from '../img/about.jpg';
+import Service from '../Service/Service';
 
 const Home = () => {
     return (
@@ -89,6 +90,11 @@ const Home = () => {
                         </div>
                     </Col>
                 </Row>
+            </div>
+
+
+            <div>
+                <Service></Service>
             </div>
         </>
     );
