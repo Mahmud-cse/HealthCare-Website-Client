@@ -1,0 +1,44 @@
+.customSignUp {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px; */
+}
+
+.custom-link {
+    text-decoration: none;
+}
+
+#customLogin3 {
+    color: white;
+    background-color: #23394A;
+    /* margin-bottom: -20px; */
+}
+
+
+/* style inputs and link buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    /* remove underline from anchors */
+}
+
+
+.btn:hover {
+    opacity: 1;
+}
+
+/* colors to fb, twitter and google buttons */
+.google {
+    background-color: #dd4b39;
+    color: white;
+}

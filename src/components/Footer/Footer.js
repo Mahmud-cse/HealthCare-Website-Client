@@ -9,7 +9,7 @@ const Footer = () => {
              <Container className="pt-5">
                 <Row>
                 <Col lg="6">
-                    <img className="mx-auto mb-4" src={logo} alt="logo" style={{width:"80px",marginLeft:"-50px"}}/>
+                    <img className="mx-auto mb-4" src={logo} alt="logo" style={{width:"80px",marginLeft:"-40px"}}/>
                 </Col>
                 <Col lg="6">
                     <Row>
