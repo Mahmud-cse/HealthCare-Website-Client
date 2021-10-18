@@ -46,11 +46,13 @@ const NavBar = () => {
 
                 <span>{user.displayName}</span>
                 {
-                  user.email?
+                  user.displayName?
                   <NavLink to="" onClick={signOutUsingGoogle} className="f-13" style={{color:"black"}} activeStyle={{
                     fontWeight:"bold",
                     color:"black"
-                  }}>Logout</NavLink>
+                  }}>
+                    <Button variant="dark" className="rounded-pill">LogOut</Button>
+                  </NavLink>
                   :
                   <NavLink to="/login" className="f-13" style={{color:"black"}}   activeStyle={{
                   fontWeight: "bold",
@@ -58,7 +60,7 @@ const NavBar = () => {
                 }}>Login</NavLink>
                 }
 
-                {user.email?
+                {user.displayName?
                   ""
                   :
                   <NavLink to="/register" className="f-13"   activeStyle={{

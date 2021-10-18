@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card, Col,Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './ServiceList.css'; 
 
 const ServiceList = (props) => {
-    const {name,description,image}=props.data;
+    const {id,name,description,image}=props.data;
 
     return (
         <Col md={4} className="gap-5 mb-5 mt-5">
@@ -16,7 +17,9 @@ const ServiceList = (props) => {
                   </Card.Text>
                 </Card.Body>
                 <div className="mx-auto mb-3">
-                  <Button variant="outline-primary">READ MORE</Button>
+                  <Link to={`/serviceDetails/${id}`}>
+                    <Button variant="outline-primary">READ MORE</Button>
+                  </Link>
                 </div>
         </Card>
     </Col>

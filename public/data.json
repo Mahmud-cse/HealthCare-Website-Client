@@ -1,36 +1,36 @@
 [
     {
-        "id":"1",
+        "id":1,
         "name":"Allergic Issue",
         "description":"Allergies can range from minor to severe. Anaphylaxis is a severe reaction that can be life-threatening.",
         "image":"img/service-icon6.png"
     },
     {
-        "id":"2",
+        "id":2,
         "name":"Mental Disorders",
         "description":"Allergies can range from minor to severe. Anaphylaxis is a severe reaction that can be life-threatening.",
         "image":"img/service-icon5.png"
     },
     {
-        "id":"3",
+        "id":3,
         "name":"Heart Failure",
         "description":"Allergies can range from minor to severe. Anaphylaxis is a severe reaction that can be life-threatening.",
         "image":"img/service-icon4.png"
     },
     {
-        "id":"4",
+        "id":4,
         "name":"Vacterial Vaginosis",
         "description":"Allergies can range from minor to severe. Anaphylaxis is a severe reaction that can be life-threatening.",
         "image":"img/service-icon3.png"
     },
     {
-        "id":"5",
+        "id":5,
         "name":"Eye Care",
         "description":"Allergies can range from minor to severe. Anaphylaxis is a severe reaction that can be life-threatening.",
         "image":"img/service-icon2.png"
     },
     {
-        "id":"6",
+        "id":6,
         "name":"Dental Care",
         "description":"Allergies can range from minor to severe. Anaphylaxis is a severe reaction that can be life-threatening.",
         "image":"img/service-icon1.png"

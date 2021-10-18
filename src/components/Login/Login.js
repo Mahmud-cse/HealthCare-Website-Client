@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link,useHistory,useLocation } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import { GoogleLoginButton } from "react-social-login-buttons";
 import './Login.css';
+import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {signInUsingGoogle}=useAuth();
+    const {signInUsingGoogle,signInWithEmailAndPassword,auth,setUser}=useAuth();
+    const [email,setEmail]=useState('');
+    const [password,setPassword]=useState('');
     const location=useLocation();
     const history=useHistory();
-    const redirect_uri=location.state?.from || '/home';
+    // const redirect_uri=location.state?.from || '/home';
+
+    console.log(location.state.from);
 
     const handleGoogleLogin=()=>{
         signInUsingGoogle()
         .then((result)=>{
-            history.push(redirect_uri);
+            history.push('/home');
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
@@ -23,23 +28,50 @@ const Login = () => {
           });
     }
 
+    const handleEmail=(e)=>{
+        setEmail(e.target.value);
+    }
+
+    const handlePassword=(e)=>{
+        setPassword(e.target.value);
+    }
+
+    const handleLogin=(e)=>{
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            setUser(user);
+            Swal.fire(
+                'Login Success!',
+                'Website is yours now.',
+                'success'
+              )
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+    }
+
+
     // const {user,signInUsingGoogle}=useFirebase();
 
     return (
         <div>
         <div className="container customLogin p-5">
             <div id="customLogin2">
-            <form className="p-5">
+            <form onSubmit={handleLogin} className="p-5">
                     <h3>Sign In</h3>
 
                     <div className="form-group mb-2">
                         <label>Email address</label>
-                        <input type="email" className="form-control" placeholder="Enter email" style={{width:"100%",marginRight:"120px"}}/>
+                        <input onBlur={handleEmail} type="email" className="form-control" placeholder="Enter email" style={{width:"100%",marginRight:"120px"}}/>
                     </div>
 
                     <div className="form-group mb-2">
                         <label>Password</label>
-                        <input type="password" className="form-control" placeholder="Enter password" style={{width:"100%",marginRight:"120px"}}/>
+                        <input onBlur={handlePassword} type="password" className="form-control" placeholder="Enter password" style={{width:"100%",marginRight:"120px"}}/>
                     </div>
 
                     <div className="form-group mb-2">

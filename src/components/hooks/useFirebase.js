@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider,onAuthStateChanged,signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,onAuthStateChanged,signOut,createUserWithEmailAndPassword,updateProfile,signInWithEmailAndPassword } from "firebase/auth";
 import initailizeAuthentication from '../Firebase/firebase.init';
 initailizeAuthentication();
 
@@ -28,9 +28,14 @@ const useFirebase = () => {
     },[]);
 
     return {
+        auth,
         user,
+        setUser,
+        updateProfile,
         signInUsingGoogle,
-        signOutUsingGoogle
+        signOutUsingGoogle,
+        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword
     }
 };
 
