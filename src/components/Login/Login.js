@@ -1,8 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useHistory,useLocation } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
+import { GoogleLoginButton } from "react-social-login-buttons";
 import './Login.css';
 
 const Login = () => {
+    const {signInUsingGoogle}=useAuth();
+    const location=useLocation();
+    const history=useHistory();
+    const redirect_uri=location.state?.from || '/home';
+
+    const handleGoogleLogin=()=>{
+        signInUsingGoogle()
+        .then((result)=>{
+            history.push(redirect_uri);
+        }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            console.log(errorCode,errorMessage);
+          });
+    }
+
+    // const {user,signInUsingGoogle}=useFirebase();
+
     return (
         <div>
         <div className="container customLogin p-5">
@@ -32,15 +54,16 @@ const Login = () => {
                         <Link to="/register" className="custom-link">Forget Password</Link>
                     </p> */}
                     <div style={{marginTop:"20px"}}>
-                    <p>Don't Have an Account? <Link to="/signup" style={{textDecoration:"none"}}>Sign Up Now</Link></p>
+                    <p>Don't Have an Account? <Link to="/register" style={{textDecoration:"none"}}>Register Now</Link></p>
                     </div>
                     <div style={{textAlign:"center",margin:"25px"}}><b>Or</b></div>
                     
 
                     <div>
-                        <a href="/#" class="google btn">
+                        {/* <a onClick={signInUsingGoogle} href="/#" class="google btn">
                             <i class="fab fa-google"></i> Login with Google
-                        </a>
+                        </a> */}
+                        <GoogleLoginButton onClick={handleGoogleLogin}></GoogleLoginButton>
                     </div>
                 </form>
             </div>

@@ -36,16 +36,8 @@ const Registration = () => {
 
                 <button type="submit" className="btn btn-primary btn-block mb-2 mt-2">Register</button>
                 <p className="forgot-password text-right">
-                    Already Registered? <Link to="/login" className="custom-link">Log in</Link>
+                    Already Registered? <Link to="/login" className="custom-link">Log in Here</Link>
                 </p>
-                <div style={{textAlign:"center",margin:"25px"}}><b>Or</b></div>
-
-
-                <div>
-                <a href="/#" class="google btn">
-                    <i class="fab fa-google"></i> Login with Google
-                </a>
-                </div>
             </form>
         </div>
     </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import {Container, Nav, Navbar, Stack,Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useFirebase from '../hooks/useFirebase';
 import image from '../img/logo.png';
 import './NavBar.css';
 
 const NavBar = () => {
+  const {user,signOutUsingGoogle} = useFirebase();
     return (
         <div>
         <Navbar className="bg-light" collapseOnSelect expand="lg">
@@ -41,16 +43,27 @@ const NavBar = () => {
                   fontWeight: "bold",
                   color: "black"
                 }}>Blogs</NavLink>
-                <NavLink to="/login" className="f-13" style={{color:"black"}}   activeStyle={{
+                {
+                  user.email?
+                  <NavLink to="" onClick={signOutUsingGoogle} className="f-13" style={{color:"black"}} activeStyle={{
+                    fontWeight:"bold",
+                    color:"black"
+                  }}>Logout</NavLink>
+                  :
+                  <NavLink to="/login" className="f-13" style={{color:"black"}}   activeStyle={{
                   fontWeight: "bold",
                   color: "black"
                 }}>Login</NavLink>
+                }
 
-                <NavLink to="/register" className="f-13"   activeStyle={{
+                {user.email?
+                  ""
+                  :
+                  <NavLink to="/register" className="f-13"   activeStyle={{
                   color: "white"
                 }}>
                      <Button variant="dark" className="rounded-pill">Register</Button>
-                </NavLink>
+                </NavLink>}
             </Stack>
             </Nav>
           </Navbar.Collapse>

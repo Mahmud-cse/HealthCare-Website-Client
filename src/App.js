@@ -12,10 +12,12 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import Blogs from './components/Blogs/Blogs';
+import AuthProvider from './components/Context/AuthProvider';
 
 function App() {
   return (
     <div>
+    <AuthProvider>
     <Router>
       <NavBar />
         <Switch>
@@ -31,7 +33,7 @@ function App() {
          <Route exact path="/login">
            <Login />
          </Route>
-         <Route exact path="/signup">
+         <Route exact path="/register">
            <Registration />
          </Route>
          <Route path="*">
@@ -40,6 +42,7 @@ function App() {
        </Switch>
        <Footer />
     </Router>
+    </AuthProvider>
    </div> 
   );
 }
