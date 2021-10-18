@@ -1,12 +1,12 @@
 import React from 'react';
 import {Container, Nav, Navbar, Stack,Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import useFirebase from '../hooks/useFirebase';
+import useAuth from '../hooks/useAuth';
 import image from '../img/logo.png';
 import './NavBar.css';
 
 const NavBar = () => {
-  const {user,signOutUsingGoogle} = useFirebase();
+  const {user,signOutUsingGoogle} = useAuth();
     return (
         <div>
         <Navbar className="bg-light" collapseOnSelect expand="lg">
@@ -43,6 +43,8 @@ const NavBar = () => {
                   fontWeight: "bold",
                   color: "black"
                 }}>Blogs</NavLink>
+
+                <span>{user.displayName}</span>
                 {
                   user.email?
                   <NavLink to="" onClick={signOutUsingGoogle} className="f-13" style={{color:"black"}} activeStyle={{

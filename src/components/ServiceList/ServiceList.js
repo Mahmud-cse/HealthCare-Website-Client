@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col,Button, CardGroup, Container } from 'react-bootstrap';
+import { Card, Col,Button} from 'react-bootstrap';
 import './ServiceList.css'; 
 
 const ServiceList = (props) => {

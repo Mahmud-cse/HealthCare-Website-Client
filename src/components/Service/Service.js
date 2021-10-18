@@ -13,6 +13,8 @@ const Service = () => {
 
     return (
         <Container>
+            <h2 style={{textAlign:"center",marginTop:"100px"}}><span style={{borderBottom:"5px solid black"}}>Our Services</span></h2>
+            
             <Row>
                 {
                     items.map(data=><ServiceList key={data.id} data={data}></ServiceList>)
