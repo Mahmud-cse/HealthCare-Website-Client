@@ -6,6 +6,7 @@ import img2 from '../img/service-thumbnail02.png';
 import img3 from '../img/service-thumbnail03.png';
 import img4 from '../img/about.jpg';
 import Service from '../Service/Service';
+import Technology from '../Technology/Technology';
 
 const Home = () => {
     return (
@@ -55,7 +56,7 @@ const Home = () => {
                         <img src={img4} className="img-fluid w-100" alt="#" />
                     </Col>
                     <Col md="12" lg="6">
-                        <h2>Short Story About Our Service</h2>
+                        <h2 className="mb-4">Short Story About Our Service</h2>
                         <p>At the height of the covid-19 pandemic, people often relied on telemedicine for doctor visits. Now, insurers are betting that some patients liked it enough to embrace new types of health coverage that encourages video visits — or outright insists on them.</p>
 
                         <p>About one in six doctor's office visits by older Americans no longer takes place in an actual doctor's office</p>
@@ -95,6 +96,10 @@ const Home = () => {
 
             <div>
                 <Service></Service>
+            </div>
+
+            <div>
+                <Technology></Technology>
             </div>
         </>
     );
