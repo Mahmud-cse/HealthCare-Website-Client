@@ -2,6 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About The Website
  1.You can Book a virtual video call with our expert doctor
 
