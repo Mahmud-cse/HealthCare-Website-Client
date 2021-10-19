@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Link,useHistory,useLocation } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import { GoogleLoginButton } from "react-social-login-buttons";
 import './Login.css';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {signInUsingGoogle,signInWithEmailAndPassword,auth,setUser}=useAuth();
+    const {signInUsingGoogle,signInWithEmailAndPassword,auth,setUser,setIsLoading}=useAuth();
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     // const location=useLocation();
@@ -16,6 +16,7 @@ const Login = () => {
     const handleGoogleLogin=()=>{
         signInUsingGoogle()
         .then((result)=>{
+            setUser(result.user);
             history.push('/home');
         }).catch((error) => {
             // Handle Errors here.
@@ -23,7 +24,8 @@ const Login = () => {
             const errorMessage = error.message;
 
             console.log(errorCode,errorMessage);
-          });
+          })
+          .finally(()=>setIsLoading(false));
     }
 
     const handleEmail=(e)=>{
@@ -34,6 +36,7 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
+    // handle Login
     const handleLogin=(e)=>{
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
@@ -44,7 +47,8 @@ const Login = () => {
                 'Login Success!',
                 'Website is yours now.',
                 'success'
-              )
+              );
+              history.push('/home');
           })
           .catch((error) => {
             const errorMessage = error.message;

@@ -23,6 +23,7 @@ const Registration = () => {
         setPassword(e.target.value);
     }
 
+    // Main Handle
     const handleRegistration=(e)=>{
         e.preventDefault();
         if(password.length<6){
@@ -30,8 +31,6 @@ const Registration = () => {
             return;
         }
         console.log(name);
-
-        // 
 
         createUserWithEmailAndPassword(auth,email,password)
         .then(result=>{
@@ -60,7 +59,7 @@ const Registration = () => {
         function refresh() {    
             setTimeout(function () {
                 window.location.reload()
-            }, 4000);
+            }, 2500);
         }
 
         // refresh();

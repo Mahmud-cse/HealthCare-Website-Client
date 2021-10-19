@@ -11,8 +11,10 @@ import Technology from '../Technology/Technology';
 const Home = () => {
     return (
         <>
+        {/* Header Section */}
+        
             <div className="customHome">
-                <div className="customHome2">
+                <div className="container customHome2">
                     <h1 style={{color:"#444444"}}>Your Health Care is Our <br /> Purpose <a href="https://www.youtube.com/watch?v=pBFQdxA-apI"
                     className="play-btn popup-youtube"><i className="fas fa-play-circle"></i></a></h1>
                     <h4 style={{color:"#999999"}}>A better Doctors , Clinics &amp; Labs . We'll help you find it</h4>

@@ -20,6 +20,7 @@ import Doctor from './components/Doctor/Doctor';
 function App() {
   return (
     <div>
+      {/* context with router */}
     <AuthProvider>
     <Router>
       <NavBar />
