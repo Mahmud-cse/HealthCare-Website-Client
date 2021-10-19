@@ -60,10 +60,10 @@ const Registration = () => {
         function refresh() {    
             setTimeout(function () {
                 window.location.reload()
-            }, 30000);
+            }, 4000);
         }
 
-        refresh();
+        // refresh();
     return (
         <div id="signupSection" className="container customSignUp">
         <div className="p-5">
@@ -86,7 +86,7 @@ const Registration = () => {
                     <p className="mt-4 text-danger">{error}</p>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block mb-2 mt-2">Register</button>
+                <button onClick={refresh}  type="submit" className="btn btn-primary btn-block mb-2 mt-2">Register</button>
                 <p className="forgot-password text-right">
                     Already Registered? <Link to="/login" className="custom-link">Log in Here</Link>
                 </p>
