@@ -15,6 +15,7 @@ import Blogs from './components/Blogs/Blogs';
 import AuthProvider from './components/Context/AuthProvider';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Doctor from './components/Doctor/Doctor';
 
 function App() {
   return (
@@ -29,11 +30,14 @@ function App() {
          <Route exact path="/home">
            <Home />
          </Route>
-         <Route exact path="/blogs">
+         <PrivateRoute exact path="/blogs">
            <Blogs />
-         </Route>
+         </PrivateRoute>
          <PrivateRoute exact path="/serviceDetails/:serviceId">
            <ServiceDetails />
+         </PrivateRoute>
+         <PrivateRoute exact path="/doctors">
+            <Doctor></Doctor>
          </PrivateRoute>
          <Route exact path="/login">
            <Login />

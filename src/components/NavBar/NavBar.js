@@ -46,7 +46,7 @@ const NavBar = () => {
 
                 <span>{user.displayName}</span>
                 {
-                  user.displayName?
+                  user.displayName || user.email?
                   <NavLink to="" onClick={signOutUsingGoogle} className="f-13" style={{color:"black"}} activeStyle={{
                     fontWeight:"bold",
                     color:"black"
@@ -60,7 +60,7 @@ const NavBar = () => {
                 }}>Login</NavLink>
                 }
 
-                {user.displayName?
+                {user.displayName || user.email?
                   ""
                   :
                   <NavLink to="/register" className="f-13"   activeStyle={{

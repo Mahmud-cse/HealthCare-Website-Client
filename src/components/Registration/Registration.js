@@ -54,7 +54,16 @@ const Registration = () => {
         updateProfile(auth.currentUser,{displayName:name})
         .then(result=>{})
         };
+    
+        // window.location.reload();
 
+        function refresh() {    
+            setTimeout(function () {
+                window.location.reload()
+            }, 30000);
+        }
+
+        refresh();
     return (
         <div id="signupSection" className="container customSignUp">
         <div className="p-5">
@@ -63,7 +72,7 @@ const Registration = () => {
 
                 <div className="form-group mb-2" >
                     <label>Name</label>
-                    <input onBlur={handleName} type="text" className="form-control" placeholder="First name" style={{width:"100%",marginRight:"120px"}}/>
+                    <input onBlur={handleName} type="text" className="form-control" placeholder="Name" style={{width:"100%",marginRight:"120px"}}/>
                 </div>
 
                 <div className="form-group mb-2">

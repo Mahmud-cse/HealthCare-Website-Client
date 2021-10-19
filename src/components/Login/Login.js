@@ -9,11 +9,9 @@ const Login = () => {
     const {signInUsingGoogle,signInWithEmailAndPassword,auth,setUser}=useAuth();
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
-    const location=useLocation();
+    // const location=useLocation();
     const history=useHistory();
     // const redirect_uri=location.state?.from || '/home';
-
-    console.log(location.state.from);
 
     const handleGoogleLogin=()=>{
         signInUsingGoogle()

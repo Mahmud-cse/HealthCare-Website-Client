@@ -1,0 +1,38 @@
+[{
+    "name": "Basic",
+    "price": "19.00",
+    "bandwidth": "1GB",
+    "space": "100MB",
+    "support": "No",
+    "domain": "05",
+    "fees": "No",
+    "is_active" : false
+},{
+    "name": "Popular",
+    "price": "39.00",
+    "bandwidth": "1.5GB",
+    "space": "500MB",
+    "support": "Yes",
+    "domain": "10",
+    "fees": "No",
+    "is_active" : true
+},{
+    "name": "Advance",
+    "price": "80.00",
+    "bandwidth": "2GB",
+    "space": "1GB",
+    "support": "Yes",
+    "domain": "15",
+    "fees": "No",
+    "is_active" : false
+},{
+    "name": "Premium",
+    "price": "19.00",
+    "bandwidth": "2.5GB",
+    "space": "1.5GB",
+    "support": "No",
+    "domain": "20",
+    "fees": "Yes",
+    "is_active" : false
+}
+]
