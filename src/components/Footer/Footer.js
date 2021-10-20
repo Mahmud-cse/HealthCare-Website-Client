@@ -15,10 +15,10 @@ const Footer = () => {
                     <Row>
                         <Col xs="6" lg="4">
                             <ul className="list-unstyled" style={{color:"white"}}>
-                                <li>About Online Food</li>
+                                <li>About Our Service</li>
                                 <li>Read Our Blog</li>
-                                <li>Sign up to deliver</li>
-                                <li>Add your restaurant</li>
+                                <li>Sign up to Read</li>
+                                <li>Add your Account</li>
                             </ul>
                         </Col>
                         <Col xs="6" lg="4">
@@ -26,7 +26,7 @@ const Footer = () => {
                                 <li>Get Help</li>
                                 <li>Read FAQs</li>
                                 <li>View all cities</li>
-                                <li>Restaurants near me</li>
+                                <li>Available Doctor's</li>
                             </ul>
                         </Col>
                         <Col xs="6" lg="4">
